@@ -110,9 +110,9 @@ public class WarGame extends JFrame{
       add(panelWest,   BorderLayout.WEST);
       add(panelSouth,  BorderLayout.SOUTH);
       
-      
+      //set up GUI
       pack();
-      setSize(750,525);
+      setSize(750,525);//size of GUI
       setVisible(true);
    } 
    
@@ -149,7 +149,7 @@ public class WarGame extends JFrame{
          int player1Card1 =p1Card.getRank();//player 1 card rank
          
          
-             
+          //add card to whoever have the higher  war card   
          if(player1Card1 >player2Card1){
             player1Deck.AddCard(p2Card);
             player1Deck.AddCard(p1Card);            
@@ -223,7 +223,7 @@ public class WarGame extends JFrame{
          //Create new cards
          Card card3 = new Card();
          Card card4 = new Card();
-         
+         //set war card to integer value
          int player1WCard = p2WarCard.getRank();
          int player2WCard = p1WarCard.getRank();
          
@@ -269,7 +269,7 @@ public class WarGame extends JFrame{
 
      public String getJPG(Card card){
         String getPic;
-
+        // card holder value that greater than 10
         switch(card.getRank()){
         case 11:
            getPic = "jack" + card.getSuit() + ".jpg";
